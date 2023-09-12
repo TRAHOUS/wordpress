@@ -1,0 +1,92 @@
+/*
+Theme Name: Divi Child Theme
+Description: Theme enfant de Divi par Alliance Technique
+Author: Alliance Technique
+Author URI: https://www.alliance-technique.fr
+Template: Divi
+Version: 1.1
+*/
+
+.dc-centrer-verticalement {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	 -moz-box-orient: vertical;
+	 -moz-box-direction: normal;
+	  -ms-flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+}
+
+
+/*
+** Inverser le sens des colonnes sur mobile
+*/
+
+@media screen and ( max-width: 980px ) {
+    .inverse {
+        display: flex;
+        flex-direction: column-reverse;
+}
+  }
+
+	/*
+	** Bloquer le scroll horizontal sur mobile
+	*/
+
+#page-container {
+	overflow-x: hidden!important;
+}
+
+/*
+** Modifier la hauteur d'img sans déformer
+*/
+
+.img-wrapper img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+
+/*
+** MENU MOBILE : en pleine largeur et le hamburger devient une croix pour fermer
+*/
+
+.et_mobile_menu {
+	margin-left: -30px;
+	padding: 5%;
+	width: calc( 100% + 60px);
+}
+
+.mobile_nav.opened .mobile_menu_bar:before {
+	content: "\4d";
+}
+
+
+/*
+** AUGMENTER LA LARGEUR CHAMP RÉSULTAT CAPTCHA
+** Parfois, suivant la taille du texte, certains chiffres du résultat sont masqués
+*/
+.et_pb_contact_right p input {
+	max-width: 50px;
+}
+
+
+/*
+** METTRE EXPOSANTS ET INDICES À LA BONNE TAILLE
+** Généralement, ils sont bien trop gros…
+*/
+sup, sub {
+    font-size: 70%;
+}
